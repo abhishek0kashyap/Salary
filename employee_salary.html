@@ -1,0 +1,165 @@
+
+
+<!doctype html>
+<html lang="eng">
+<head>
+<title> Employee salary </title>
+</head>
+<script language="javascript">
+
+function sal()
+
+{
+
+	val=s=0,t=0,d=0,h=0,g=0,tx=0,tot=0;
+
+s=parseInt(document.employee.e_sal.value);
+
+t=parseInt(document.employee.tap.value);
+t=s*t/100;
+document.employee.ta.value=t;
+
+d=parseInt(document.employee.dap.value);
+d=s*d/100;
+document.employee.da.value=d;
+
+h=parseInt(document.employee.hrap.value);
+h=s*h/100;
+document.employee.hra.value=h;
+
+g=s+t+d+h;
+document.employee.g_sal.value=g;
+
+
+
+tx=parseInt(document.employee.taxp.value);
+tx=g*tx/100;
+document.employee.tax.value=tx;
+
+tot=g-tx;
+document.employee.totl.value=tot;
+
+}
+
+</script>
+
+<body bgcolor="cyan">
+<form name="employee">
+<table border="0" height="40%" width="70%" align="center">
+
+<tr>
+<th colspan="3" ><font face="Bradley Hand ITC"  size="06" color="blue"> <u> Employee Salary Details</u> </th>
+</tr>
+
+<tr> 
+<td> &nbsp; </td>
+<td> &nbsp; </td>
+<td> &nbsp; </td>
+</tr>
+
+<tr> 
+<td align="right"><font face="courier new" color="red"> Employee id <b>:</b> &nbsp; </td>
+<td> <input type ="text" name="e_id" maxlength="4" /> </td>
+<td rowspan="3" width="40%"><blink> <marquee><image src ="project\12.png" height="30%" width="70%" /></marquee></td>
+</tr>
+
+
+<tr> 
+<td width="15%" align="right"><font face="courier new" color="red"> Employee Name <b>:</b> &nbsp; </td>
+<td> <input type ="text" name="e_nm" maxlength="24" /> </td>
+</tr>
+
+
+<tr> 
+<td align="right"><font face="courier new" color="red"> Employee Salary <b>:</b> &nbsp; </td>
+<td> <input type ="text" name="e_sal" maxlength="5" /> </td>
+</tr>
+
+
+
+<tr> 
+<td align="right"> T.A : </td>
+<td width="15%" > <input type ="text" name="ta" readonly="true"  size="6"/> <input type="text" name="tap" maxlength="2" size="1" /> %</td>
+<td> &nbsp; </td>
+</tr>
+
+
+<tr> 
+<td align="right"> D.A : </td>
+<td> <input type ="text" name="da" readonly="true" size="6"/> <input type="text" name="dap" maxlength="2" size="1"/> %</td>
+<td> &nbsp; </td>
+</tr>
+
+
+<tr> 
+<td align="right"> H.R.A : </td>
+<td> <input type ="text" name="hra" readonly="true" size="6" /> <input type="text" name="hrap" maxlength="2" size="1"/> %</td>
+<td> &nbsp; </td>
+</tr>
+
+<tr> 
+<td> &nbsp; </td>
+<td> &nbsp; </td>
+<td> &nbsp; </td>
+</tr>
+
+<tr> 
+<td align="right"><font face="courier new" color="red"> Gross Salary <b>:</b> &nbsp; </td>
+<td> <input type ="text" name="g_sal" readonly="true" /> </td>
+<td> &nbsp; </td>
+</tr>
+
+<tr> 
+<td> &nbsp; </td>
+<td> &nbsp; </td>
+<td> &nbsp; </td>
+</tr>
+
+<tr> 
+<td align="right"> TAX : </td>
+<td> <input type ="text" name="tax" readonly="true" size="6"/> <input type="text" name="taxp" maxlength="2"  size="1"/> %</td>
+<td> &nbsp; </td>
+</tr>
+
+<tr> 
+<td> &nbsp; </td>
+<td> &nbsp; </td>
+<td> &nbsp; </td>
+</tr>
+
+<tr> 
+<td align="right"><font face="courier new" color="red"> Net Amount <b>:</b> &nbsp; </td>
+<td> <input type ="text" name="totl" readonly="true" /> </td>
+<td> &nbsp; </td>
+</tr>
+
+<tr> 
+<td> &nbsp; </td>
+<td> &nbsp; </td>
+<td> &nbsp; </td>
+</tr>
+
+<tr> 
+<td> &nbsp; </td>
+<td> <input type ="button" value="calculate" onclick="sal()" /> &nbsp; &nbsp; <input type ="reset" value="clear" /></td>
+<td> &nbsp; </td>
+</tr>
+
+<tr> 
+<td> &nbsp; </td>
+<td> &nbsp; </td>
+<td> &nbsp; </td>
+</tr>
+
+<tr> 
+<td colspan="3"></td>
+</tr>
+
+
+</table>
+
+<marquee behavior="alternate" onmouseover="stop()" onmouseout="start()"> developed by : - &nbsp; kashyap </marquee>
+
+</form>
+</body>
+</html>
